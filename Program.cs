@@ -27,13 +27,18 @@ class Person
     public string FirstName { get; set; }
 
     // Define property for last name
-    public string LastName { get; set; }  
+    public string LastName { get; set; }
 
     // Constructor that takes first name and last name as parameters
     public Person(string firstName, string lastName)
     {
         FirstName = firstName;
         LastName = lastName;
+    }
+
+    // Chained constructor that takes only the first name parameter
+    public Person(string firstName) : this(firstName, "")
+    {
     }
 
     // Method to get the person's full name
